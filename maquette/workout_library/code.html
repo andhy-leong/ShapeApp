@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&amp;family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "secondary-container": "#474746",
+                    "primary-fixed": "#c3f400",
+                    "on-surface": "#e2e2e2",
+                    "background": "#121414",
+                    "surface-bright": "#37393a",
+                    "on-tertiary": "#303030",
+                    "surface-container-highest": "#333535",
+                    "outline": "#8e9379",
+                    "surface-tint": "#abd600",
+                    "secondary": "#c8c6c5",
+                    "on-error": "#690005",
+                    "surface-variant": "#333535",
+                    "inverse-on-surface": "#2f3131",
+                    "on-primary-container": "#556d00",
+                    "secondary-fixed-dim": "#c8c6c5",
+                    "error": "#ffb4ab",
+                    "inverse-surface": "#e2e2e2",
+                    "tertiary-container": "#e4e2e1",
+                    "on-error-container": "#ffdad6",
+                    "tertiary": "#ffffff",
+                    "surface-container-lowest": "#0c0f0f",
+                    "surface-container-low": "#1a1c1c",
+                    "surface": "#121414",
+                    "inverse-primary": "#506600",
+                    "on-surface-variant": "#c4c9ac",
+                    "tertiary-fixed": "#e4e2e1",
+                    "on-tertiary-fixed": "#1b1c1c",
+                    "on-primary-fixed": "#161e00",
+                    "on-primary-fixed-variant": "#3c4d00",
+                    "on-tertiary-container": "#656464",
+                    "surface-container": "#1e2020",
+                    "on-secondary-container": "#b7b5b4",
+                    "primary-fixed-dim": "#abd600",
+                    "on-background": "#e2e2e2",
+                    "on-secondary": "#313030",
+                    "error-container": "#93000a",
+                    "on-primary": "#283500",
+                    "surface-dim": "#121414",
+                    "surface-container-high": "#282a2b",
+                    "secondary-fixed": "#e5e2e1",
+                    "on-tertiary-fixed-variant": "#474746",
+                    "outline-variant": "#444933",
+                    "on-secondary-fixed": "#1c1b1b",
+                    "primary": "#ffffff",
+                    "tertiary-fixed-dim": "#c8c6c5",
+                    "on-secondary-fixed-variant": "#474746",
+                    "primary-container": "#c3f400"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "gutter": "16px",
+                    "margin": "20px",
+                    "unit": "4px",
+                    "xxl": "48px",
+                    "xl": "32px",
+                    "lg": "24px",
+                    "md": "16px",
+                    "xs": "4px",
+                    "sm": "8px"
+            },
+            "fontFamily": {
+                    "body-md": ["Inter"],
+                    "stat-numerical": ["Lexend"],
+                    "display-xl": ["Lexend"],
+                    "headline-md": ["Lexend"],
+                    "body-lg": ["Inter"],
+                    "headline-lg": ["Lexend"],
+                    "label-bold": ["Lexend"]
+            },
+            "fontSize": {
+                    "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                    "stat-numerical": ["40px", {"lineHeight": "1.0", "fontWeight": "700"}],
+                    "display-xl": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-lg": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "label-bold": ["14px", {"lineHeight": "1.0", "letterSpacing": "0.05em", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body-md selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- Top Navigation -->
+<header class="fixed top-0 w-full z-50 flex justify-between items-center px-5 h-16 bg-black/80 backdrop-blur-lg border-b border-neutral-800">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full overflow-hidden border border-primary-fixed/20">
+<img alt="User Profile" class="w-full h-full object-cover" data-alt="A close-up portrait of a determined fitness professional with sweat on their brow, set against a dark, moody gym background with Electric Lime neon lighting accents. The lighting is cinematic and high-contrast, emphasizing strength and focus. The overall aesthetic is elite, modern, and high-performance, consistent with a dark-mode digital fitness interface." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZmtC7jXvNsKoAeO01E5bNZ710-Eh_09eNxmjxfu-NgNDoO5KWIB67OClEBYwC1M9gu1pVfXeIWfzpxl5QzFz8-ufSvVy3v0AjWH1fJ2-dbJXFmgJsJ5WR2ASaOVfZzRdt0asFYwz9ysILuXCfVMbhoExpAWTLigu0kXIrfALejqjB9WlThPNzv8lqCgAUHInFFGNBDWHy5eI-dFjGjPs8A_0OVuES0lhK3mykvqMKCQQBOSaa9dmAMguLGvT_fMHxVO24CUW-fmpu"/>
+</div>
+<span class="font-['Lexend'] font-black tracking-tighter uppercase text-xl text-[#CCFF00] italic">FITVISION</span>
+</div>
+<button class="text-[#CCFF00] hover:opacity-80 transition-opacity active:scale-95 transition-transform duration-150">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+</header>
+<main class="pt-24 pb-28 px-margin">
+<!-- Search & Filter Area -->
+<section class="mb-lg space-y-md">
+<div class="relative group">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-on-surface-variant/50 group-focus-within:text-primary-fixed transition-colors" data-icon="search">search</span>
+<input class="w-full bg-surface-container-low border border-outline-variant rounded-lg py-4 pl-12 pr-4 text-label-bold focus:outline-none focus:border-primary-fixed transition-all placeholder:text-on-surface-variant/30" placeholder="SEARCH WORKOUTS" type="text"/>
+</div>
+<div class="flex gap-sm overflow-x-auto hide-scrollbar -mx-margin px-margin">
+<button class="bg-primary-fixed text-on-primary-fixed px-md py-sm rounded-full font-label-bold whitespace-nowrap active:scale-95 transition-transform">ALL ROUTINES</button>
+<button class="bg-surface-container-high text-on-surface-variant px-md py-sm rounded-full font-label-bold whitespace-nowrap active:scale-95 transition-transform">GYM</button>
+<button class="bg-surface-container-high text-on-surface-variant px-md py-sm rounded-full font-label-bold whitespace-nowrap active:scale-95 transition-transform">OUTDOORS</button>
+<button class="bg-surface-container-high text-on-surface-variant px-md py-sm rounded-full font-label-bold whitespace-nowrap active:scale-95 transition-transform">HIIT</button>
+<button class="bg-surface-container-high text-on-surface-variant px-md py-sm rounded-full font-label-bold whitespace-nowrap active:scale-95 transition-transform">STRENGTH</button>
+</div>
+</section>
+<!-- Featured Workout (Asymmetric Layout) -->
+<section class="mb-xxl">
+<h2 class="font-headline-md text-primary-fixed mb-md tracking-tight uppercase">DAILY CHALLENGE</h2>
+<div class="relative aspect-[16/10] rounded-xl overflow-hidden group">
+<img alt="Outdoor Workout" class="w-full h-full object-cover" data-alt="A powerful athlete performing a high-intensity interval training session on a concrete urban rooftop at dusk. The city skyline is visible in the background under a deep indigo sky, with sharp Electric Lime light streaks cutting through the scene. The image is high-contrast, moody, and full of raw energy, capturing a peak performance moment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDUpF3NGUROkJC4jJAKmJgniBd5dMkQPewfPjZx0zSd2uV_ksKeYDrphy7ZoLuXChN6Mz9f9rfxemoQCJOpruYES2f1_QVwk-XhccQDykpmfPdfTHqCkec0Ct88TVCxKWz0JWi7xdlAzMoCXi71wZd--bSg-Hiu8fS_Tw3K2SKSgEyBFlBuILp6WXqJla6IuPTZ91Y14jbJhD1VWwyvVbvA-nkMjTwG3X15GYJhPSuAYEFm8dRjvrFv8z03bmqu-VmVdGo7KE-SUPep"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-lg w-full">
+<div class="flex items-center gap-xs mb-xs">
+<span class="w-2 h-2 rounded-full bg-primary-fixed animate-pulse"></span>
+<span class="text-primary-fixed font-label-bold text-[10px]">LIVE NOW</span>
+</div>
+<h3 class="font-display-xl text-white mb-sm">METABOLIC FIRE</h3>
+<div class="flex gap-md text-white/70 font-label-bold text-xs">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm" data-icon="schedule">schedule</span> 45 MIN</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm" data-icon="bolt">bolt</span> INTENSE</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm" data-icon="local_fire_department">local_fire_department</span> 620 KCAL</span>
+</div>
+</div>
+<button class="absolute bottom-lg right-lg w-12 h-12 bg-primary-fixed rounded-full flex items-center justify-center text-on-primary-fixed shadow-lg active:scale-90 transition-transform">
+<span class="material-symbols-outlined" data-icon="play_arrow" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</button>
+</div>
+</section>
+<!-- Library Grid (Bento Style) -->
+<section class="space-y-lg">
+<div class="flex justify-between items-end">
+<h2 class="font-headline-md text-on-surface tracking-tight uppercase">YOUR LIBRARY</h2>
+<span class="font-label-bold text-primary-fixed text-xs">24 ROUTINES</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-lg">
+<!-- Workout Card 1 -->
+<div class="bg-surface-container-low rounded-xl p-md border-l-4 border-primary-fixed group hover:bg-surface-container-high transition-colors">
+<div class="flex gap-md">
+<div class="w-24 h-24 rounded-lg overflow-hidden shrink-0">
+<img alt="Gym Exercise" class="w-full h-full object-cover" data-alt="Close-up of heavy dumbbells on a dark rubber gym floor with atmospheric smoke and Electric Lime lighting. The focus is sharp on the metallic texture of the weights, creating a professional and intense bodybuilding atmosphere. The color palette is strictly black, dark grey, and vibrant lime." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBH_lNdUfV4DHjz8tRrggisk9B4SSANtQ3r4yRioYmLPrOlrd7kXJgIuf4z9lF682iNeezX4GcvS7O2OPk1Zb7RsVmRV_F51VrdIdEoUL0jRFUxrj3GcjBXIjgNwLBf8HeEbIXnPLVu73YYnS8CLr4-1Xw8btGWs5k6ElqdFsV3ax4Sj-q526GI88Tq4dRUXjIz87luzX3RgLZeGcL1NaWf8h6oaGD9cSJdgS-Iiib3XYpAiVEoarY8CpyC-CuWU5R186Po4gojmrpl"/>
+</div>
+<div class="flex flex-col justify-between flex-1">
+<div>
+<div class="flex justify-between items-start">
+<span class="font-label-bold text-[10px] text-on-surface-variant uppercase tracking-widest">GYM • STRENGTH</span>
+<span class="material-symbols-outlined text-on-surface-variant/30 text-lg group-hover:text-primary-fixed transition-colors" data-icon="favorite">favorite</span>
+</div>
+<h4 class="font-headline-md text-white text-lg mt-1">POWER ASCENT</h4>
+</div>
+<div class="flex justify-between items-center pt-sm">
+<span class="font-stat-numerical text-primary-fixed text-xl">35<span class="text-[10px] font-label-bold ml-1 text-on-surface-variant">MIN</span></span>
+<div class="flex gap-1">
+<div class="w-1 h-3 bg-primary-fixed rounded-full"></div>
+<div class="w-1 h-3 bg-primary-fixed rounded-full"></div>
+<div class="w-1 h-3 bg-surface-container-highest rounded-full"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Workout Card 2 -->
+<div class="bg-surface-container-low rounded-xl p-md border-l-4 border-transparent hover:border-primary-fixed group hover:bg-surface-container-high transition-all">
+<div class="flex gap-md">
+<div class="w-24 h-24 rounded-lg overflow-hidden shrink-0">
+<img alt="Running" class="w-full h-full object-cover" data-alt="A focused runner's legs in motion on an asphalt road during a golden hour sunset that has been color-graded to a cool, dark cyan and black tone. Sharp Electric Lime highlights emphasize the movement and high-tech athletic gear. The style is cinematic, dynamic, and emphasizes peak physical performance." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCaTyIREyl0TKHWVjNNPRvSPOxPAvpNysTYZgGFjtklGZkotidXrj3HyTQeV7eODD4BgYowRTKFcy0GZs4g42vioszl5jYdQFciMBA9DMzxP1uIdbPvavhmASzPPym2-Pt48drPuEOg0ZkhRMJVLjMHXREMUd7zPVfwicrEdIeQSWOGZ5g6kKlyoLlp8NhyQdb_h9_pVHEk7TvYA925iEUSFD5rJcde3Y3b67GLNY_40QaIczYQeO6jlUSsOZ5_vAOHkDUPodgjBAap"/>
+</div>
+<div class="flex flex-col justify-between flex-1">
+<div>
+<div class="flex justify-between items-start">
+<span class="font-label-bold text-[10px] text-on-surface-variant uppercase tracking-widest">OUTDOORS • CARDIO</span>
+<span class="material-symbols-outlined text-on-surface-variant/30 text-lg group-hover:text-primary-fixed transition-colors" data-icon="favorite">favorite</span>
+</div>
+<h4 class="font-headline-md text-white text-lg mt-1">URBAN SPRINT</h4>
+</div>
+<div class="flex justify-between items-center pt-sm">
+<span class="font-stat-numerical text-primary-fixed text-xl">20<span class="text-[10px] font-label-bold ml-1 text-on-surface-variant">MIN</span></span>
+<div class="flex gap-1">
+<div class="w-1 h-3 bg-primary-fixed rounded-full"></div>
+<div class="w-1 h-3 bg-primary-fixed rounded-full"></div>
+<div class="w-1 h-3 bg-primary-fixed rounded-full"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Workout Card 3 -->
+<div class="bg-surface-container-low rounded-xl p-md border-l-4 border-transparent hover:border-primary-fixed group hover:bg-surface-container-high transition-all">
+<div class="flex gap-md">
+<div class="w-24 h-24 rounded-lg overflow-hidden shrink-0">
+<img alt="Kettlebell" class="w-full h-full object-cover" data-alt="A heavy kettlebell resting on a sleek, dark grey gym floor. The scene is illuminated by a single, sharp overhead light and a side-lit Electric Lime glow. The image quality is ultra-sharp, focusing on the gritty texture of the iron and the clean lines of the modern fitness environment. Minimalist and authoritative." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDMDCCKD_UNCz_CAAtY8QMux7Jp5qvcdotWinHQjjpUABiM10ZHgnrsSzok-AdbKutGBIxgLnNsE9dnYx6EVvXytB8qvlXZlfgYq5tluKWmwinP_7nt80jYbBFrfnxWfheawt4nUKoZfF95t5oGFXwaI68kZq5cDPrU9xWgYhBxd58oj78wjETsm5ugziL_JGP9vznxf947-Zkac2YfgFotIJL7DMrJ4flpsITLYGLxRxvJ4DwBueJrtSSpzhG2fpvi2c3e6jRzlCSV"/>
+</div>
+<div class="flex flex-col justify-between flex-1">
+<div>
+<div class="flex justify-between items-start">
+<span class="font-label-bold text-[10px] text-on-surface-variant uppercase tracking-widest">GYM • HIIT</span>
+<span class="material-symbols-outlined text-on-surface-variant/30 text-lg group-hover:text-primary-fixed transition-colors" data-icon="favorite">favorite</span>
+</div>
+<h4 class="font-headline-md text-white text-lg mt-1">IRON CORE</h4>
+</div>
+<div class="flex justify-between items-center pt-sm">
+<span class="font-stat-numerical text-primary-fixed text-xl">50<span class="text-[10px] font-label-bold ml-1 text-on-surface-variant">MIN</span></span>
+<div class="flex gap-1">
+<div class="w-1 h-3 bg-primary-fixed rounded-full"></div>
+<div class="w-1 h-3 bg-surface-container-highest rounded-full"></div>
+<div class="w-1 h-3 bg-surface-container-highest rounded-full"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 w-full z-50 flex justify-around items-center h-20 pb-4 px-2 bg-black/90 backdrop-blur-2xl border-t border-neutral-800">
+<a class="flex flex-col items-center justify-center text-neutral-500 hover:text-white transition-colors active:scale-90 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="font-['Lexend'] text-[10px] font-bold uppercase tracking-widest mt-1">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#CCFF00] transition-colors active:scale-90 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="fitness_center" style="font-variation-settings: 'FILL' 1;">fitness_center</span>
+<span class="font-['Lexend'] text-[10px] font-bold uppercase tracking-widest mt-1">Library</span>
+</a>
+<a class="flex flex-col items-center justify-center text-neutral-500 hover:text-white transition-colors active:scale-90 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="installs">install_mobile</span>
+<span class="font-['Lexend'] text-[10px] font-bold uppercase tracking-widest mt-1">Scan</span>
+</a>
+<a class="flex flex-col items-center justify-center text-neutral-500 hover:text-white transition-colors active:scale-90 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="restaurant">restaurant</span>
+<span class="font-['Lexend'] text-[10px] font-bold uppercase tracking-widest mt-1">Meals</span>
+</a>
+</nav>
+<!-- FAB for adding custom workout -->
+<button class="fixed bottom-24 right-5 w-14 h-14 bg-primary-fixed text-on-primary-fixed rounded-full flex items-center justify-center shadow-2xl active:scale-90 transition-transform z-40 border-4 border-background">
+<span class="material-symbols-outlined" data-icon="add" style="font-variation-settings: 'wght' 700;">add</span>
+</button>
+</body></html>

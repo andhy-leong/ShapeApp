@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&amp;family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "secondary-container": "#474746",
+                    "primary-fixed": "#c3f400",
+                    "on-surface": "#e2e2e2",
+                    "background": "#121414",
+                    "surface-bright": "#37393a",
+                    "on-tertiary": "#303030",
+                    "surface-container-highest": "#333535",
+                    "outline": "#8e9379",
+                    "surface-tint": "#abd600",
+                    "secondary": "#c8c6c5",
+                    "on-error": "#690005",
+                    "surface-variant": "#333535",
+                    "inverse-on-surface": "#2f3131",
+                    "on-primary-container": "#556d00",
+                    "secondary-fixed-dim": "#c8c6c5",
+                    "error": "#ffb4ab",
+                    "inverse-surface": "#e2e2e2",
+                    "tertiary-container": "#e4e2e1",
+                    "on-error-container": "#ffdad6",
+                    "tertiary": "#ffffff",
+                    "surface-container-lowest": "#0c0f0f",
+                    "surface-container-low": "#1a1c1c",
+                    "surface": "#121414",
+                    "inverse-primary": "#506600",
+                    "on-surface-variant": "#c4c9ac",
+                    "tertiary-fixed": "#e4e2e1",
+                    "on-tertiary-fixed": "#1b1c1c",
+                    "on-primary-fixed": "#161e00",
+                    "on-primary-fixed-variant": "#3c4d00",
+                    "on-tertiary-container": "#656464",
+                    "surface-container": "#1e2020",
+                    "on-secondary-container": "#b7b5b4",
+                    "primary-fixed-dim": "#abd600",
+                    "on-background": "#e2e2e2",
+                    "on-secondary": "#313030",
+                    "error-container": "#93000a",
+                    "on-primary": "#283500",
+                    "surface-dim": "#121414",
+                    "surface-container-high": "#282a2b",
+                    "secondary-fixed": "#e5e2e1",
+                    "on-tertiary-fixed-variant": "#474746",
+                    "outline-variant": "#444933",
+                    "on-secondary-fixed": "#1c1b1b",
+                    "primary": "#ffffff",
+                    "tertiary-fixed-dim": "#c8c6c5",
+                    "on-secondary-fixed-variant": "#474746",
+                    "primary-container": "#c3f400"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "gutter": "16px",
+                    "margin": "20px",
+                    "unit": "4px",
+                    "xxl": "48px",
+                    "xl": "32px",
+                    "lg": "24px",
+                    "md": "16px",
+                    "xs": "4px",
+                    "sm": "8px"
+            },
+            "fontFamily": {
+                    "body-md": ["Inter"],
+                    "stat-numerical": ["Lexend"],
+                    "display-xl": ["Lexend"],
+                    "headline-md": ["Lexend"],
+                    "body-lg": ["Inter"],
+                    "headline-lg": ["Lexend"],
+                    "label-bold": ["Lexend"]
+            },
+            "fontSize": {
+                    "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                    "stat-numerical": ["40px", {"lineHeight": "1.0", "fontWeight": "700"}],
+                    "display-xl": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-lg": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "label-bold": ["14px", {"lineHeight": "1.0", "letterSpacing": "0.05em", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>.camera-view-container {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(https://lh3.googleusercontent.com/aida-public/AB6AXuC5_IGfuXl5mjZCCnx9X3dw9Uf9nlbciiObafldeqgXe5JhlyumMjVOpQTIJszpqSn7PPOx4dkZX5o-LlEIviRTD8ssc9aUc97rSPfBK5QeXl4F_F3fRYgpfW3K69dA1N26_LoWKPeGWDTYNStxoU9TYozNwIjZG-OiTJn61MW-mmEgqT2BK-XDjIFU4LMEIw1UnNkGqFYiPqa4TLqt29N2wmXC_r5JkbzYZ0EdnbCQ51QqGQ5eEgZVIdYuma2GBQzwjYq8-UF3si0u);
+    background-size: cover;
+    background-position: center
+    }
+.scanner-focus-area {
+    border: 2px solid rgba(195, 244, 0, 0.4);
+    box-shadow: 0 0 0 4000px rgba(0, 0, 0, 0.5)
+    }
+.pulse-dot {
+    animation: pulse-animation 2s infinite
+    }
+@keyframes pulse-animation {
+    0% {
+        transform: scale(0.95);
+        opacity: 0.7;
+        } 50% {
+        transform: scale(1.1);
+        opacity: 1;
+        } 100% {
+        transform: scale(0.95);
+        opacity: 0.7;
+        }
+    }</style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface font-body-md selection:bg-primary-fixed selection:text-on-primary-fixed overflow-hidden">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 flex justify-between items-center px-5 h-16 bg-black/80 backdrop-blur-lg border-b border-neutral-800">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full overflow-hidden border border-primary-fixed">
+<img alt="Profile" class="w-full h-full object-cover" data-alt="A professional close-up portrait of a fit woman with a confident expression, captured in high-resolution with cinematic lighting. The image maintains a sleek, modern aesthetic with subtle dark tones in the background, matching the elite coach brand identity. Her features are sharp and clear, reflecting a focus on health and performance excellence." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNRYJQ_dVhNHUBcv0MRy2YOn4c4Ss27NjTr3FLbyZgal84E-zfM4dh_gbTGu5iXuwJBmR_2zShlWnuuI2zZ_7TenwZfw8dEGtyqyOaY1cbjLv8-gR2u8fOOokOWgSBsZ6VvKGGyyjTN3CBE8ySwqe5zQcwuXjcKeRVQ3LwnO0GeRIs68DiHV3a8Lfvpfwa8dELjZDJGamad57zfCIs7JRKqjgy6V4DGeiCl4duAuj-kl3VhN4GxuY9x8UB-7Sq8E5bIS7ZCWXbFoHV"/>
+</div>
+<h1 class="text-xl font-black text-[#CCFF00] italic font-['Lexend'] tracking-tighter uppercase">FITVISION</h1>
+</div>
+<button class="text-[#CCFF00] hover:opacity-80 transition-opacity active:scale-95 transition-transform duration-150">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+</header>
+<!-- Main Content: Scanner View -->
+<main class="relative h-screen w-full pt-16 pb-20">
+<!-- Camera Background Simulation -->
+<div class="absolute inset-0 camera-view-container" data-alt="A high-angle, first-person perspective photograph of a healthy Mediterranean salad bowl with grilled salmon, avocado slices, and cherry tomatoes on a dark stone surface. The lighting is sharp and professional, highlighting textures and vibrant colors. The scene is framed as if viewed through a high-tech digital camera interface, with subtle digital artifacts and a focused, energetic atmosphere consistent with a premium fitness application.">
+<!-- Scanning Reticle Overlay -->
+<div class="absolute inset-0 flex items-center justify-center p-8">
+<div class="scanner-focus-area relative w-full aspect-square max-w-sm rounded-xl overflow-hidden border-2 border-primary-fixed/40">
+<!-- Corner Accents -->
+<div class="absolute top-0 left-0 w-8 h-8 border-t-4 border-l-4 border-primary-fixed"></div>
+<div class="absolute top-0 right-0 w-8 h-8 border-t-4 border-r-4 border-primary-fixed"></div>
+<div class="absolute bottom-0 left-0 w-8 h-8 border-b-4 border-l-4 border-primary-fixed"></div>
+<div class="absolute bottom-0 right-0 w-8 h-8 border-b-4 border-r-4 border-primary-fixed"></div>
+<!-- Scanning Line -->
+<div class="absolute left-0 right-0 h-0.5 bg-primary-fixed shadow-[0_0_15px_#c3f400] animate-bounce"></div>
+<!-- Target Identifier -->
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center">
+<div class="bg-primary-fixed/20 backdrop-blur-md px-4 py-1 rounded-full border border-primary-fixed flex items-center gap-2">
+<span class="pulse-dot w-2 h-2 rounded-full bg-primary-fixed"></span>
+<span class="font-label-bold text-label-bold text-primary-fixed uppercase tracking-widest">Identifying...</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Real-time Macro Breakdown Overlay (Floating Glass Card) -->
+<div class="absolute bottom-24 left-margin right-margin z-20">
+<div class="bg-black/80 backdrop-blur-2xl border border-neutral-800 rounded-xl p-6 shadow-2xl">
+<div class="flex justify-between items-start mb-6">
+<div>
+<span class="font-label-bold text-label-bold text-primary-fixed uppercase mb-1 block">Detection</span>
+<h2 class="font-headline-lg text-headline-lg text-white leading-tight">Atlantic Salmon Salad</h2>
+</div>
+<div class="text-right">
+<span class="font-stat-numerical text-stat-numerical text-primary-fixed">482</span>
+<span class="font-label-bold text-label-bold text-neutral-400 block uppercase">Calories</span>
+</div>
+</div>
+<!-- Macro Grid -->
+<div class="grid grid-cols-3 gap-4 mb-6">
+<div class="bg-surface-container-low p-4 rounded-lg border-l-2 border-primary-fixed">
+<span class="font-label-bold text-label-bold text-neutral-400 uppercase text-[10px] block mb-1">Protein</span>
+<div class="flex items-baseline gap-1">
+<span class="font-headline-md text-headline-md text-white">42</span>
+<span class="font-label-bold text-label-bold text-neutral-500 uppercase">g</span>
+</div>
+</div>
+<div class="bg-surface-container-low p-4 rounded-lg">
+<span class="font-label-bold text-label-bold text-neutral-400 uppercase text-[10px] block mb-1">Carbs</span>
+<div class="flex items-baseline gap-1">
+<span class="font-headline-md text-headline-md text-white">12</span>
+<span class="font-label-bold text-label-bold text-neutral-500 uppercase">g</span>
+</div>
+</div>
+<div class="bg-surface-container-low p-4 rounded-lg">
+<span class="font-label-bold text-label-bold text-neutral-400 uppercase text-[10px] block mb-1">Fat</span>
+<div class="flex items-baseline gap-1">
+<span class="font-headline-md text-headline-md text-white">28</span>
+<span class="font-label-bold text-label-bold text-neutral-500 uppercase">g</span>
+</div>
+</div>
+</div>
+<!-- Action Button -->
+<button class="w-full bg-primary-fixed hover:bg-primary-fixed-dim active:scale-[0.98] transition-all py-4 rounded-lg flex justify-center items-center gap-3">
+<span class="material-symbols-outlined text-black font-bold" data-icon="add_circle">add_circle</span>
+<span class="font-label-bold text-label-bold text-black uppercase tracking-tighter">Add to Daily Log</span>
+</button>
+</div>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 w-full z-50 flex justify-around items-center h-20 pb-4 px-2 bg-black/90 backdrop-blur-2xl border-t border-neutral-800">
+<button class="flex flex-col items-center justify-center text-neutral-500 hover:text-white transition-colors active:scale-90 duration-200">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="font-['Lexend'] text-[10px] font-bold uppercase tracking-widest mt-1">Home</span>
+</button>
+<button class="flex flex-col items-center justify-center text-neutral-500 hover:text-white transition-colors active:scale-90 duration-200">
+<span class="material-symbols-outlined" data-icon="fitness_center">fitness_center</span>
+<span class="font-['Lexend'] text-[10px] font-bold uppercase tracking-widest mt-1">Library</span>
+</button>
+<!-- ACTIVE TAB -->
+<button class="flex flex-col items-center justify-center text-[#CCFF00] transition-colors active:scale-90 duration-200">
+<span class="material-symbols-outlined" data-icon="installs" style="font-variation-settings: 'FILL' 1;">install_mobile</span>
+<span class="font-['Lexend'] text-[10px] font-bold uppercase tracking-widest mt-1">Scan</span>
+</button>
+<button class="flex flex-col items-center justify-center text-neutral-500 hover:text-white transition-colors active:scale-90 duration-200">
+<span class="material-symbols-outlined" data-icon="restaurant">restaurant</span>
+<span class="font-['Lexend'] text-[10px] font-bold uppercase tracking-widest mt-1">Meals</span>
+</button>
+</nav>
+</body></html>

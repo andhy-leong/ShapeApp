@@ -1,0 +1,14 @@
+Options -Indexes
+
+RewriteEngine On
+
+# Transmettre l'en-tête Authorization à PHP (souvent supprimé en mode CGI/FastCGI chez IONOS)
+RewriteCond %{HTTP:Authorization} .
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+
+# Interdire l'accès direct aux fichiers sensibles
+RewriteRule ^(config\.php|config\.example\.php|schema\.sql|src/.*)$ - [F,L]
+
+# Toutes les requêtes passent par index.php
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^ index.php [QSA,L]

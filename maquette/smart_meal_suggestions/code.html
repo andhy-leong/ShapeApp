@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;600;700;800;900&amp;family=Inter:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    body {
+      background-color: #000000;
+      color: #e2e2e2;
+    }
+    .glass-effect {
+      backdrop-filter: blur(30px);
+      -webkit-backdrop-filter: blur(30px);
+    }
+  </style>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "secondary-container": "#474746",
+            "primary-fixed": "#c3f400",
+            "on-surface": "#e2e2e2",
+            "background": "#121414",
+            "surface-bright": "#37393a",
+            "on-tertiary": "#303030",
+            "surface-container-highest": "#333535",
+            "outline": "#8e9379",
+            "surface-tint": "#abd600",
+            "secondary": "#c8c6c5",
+            "on-error": "#690005",
+            "surface-variant": "#333535",
+            "inverse-on-surface": "#2f3131",
+            "on-primary-container": "#556d00",
+            "secondary-fixed-dim": "#c8c6c5",
+            "error": "#ffb4ab",
+            "inverse-surface": "#e2e2e2",
+            "tertiary-container": "#e4e2e1",
+            "on-error-container": "#ffdad6",
+            "tertiary": "#ffffff",
+            "surface-container-lowest": "#0c0f0f",
+            "surface-container-low": "#1a1c1c",
+            "surface": "#121414",
+            "inverse-primary": "#506600",
+            "on-surface-variant": "#c4c9ac",
+            "tertiary-fixed": "#e4e2e1",
+            "on-tertiary-fixed": "#1b1c1c",
+            "on-primary-fixed": "#161e00",
+            "on-primary-fixed-variant": "#3c4d00",
+            "on-tertiary-container": "#656464",
+            "surface-container": "#1e2020",
+            "on-secondary-container": "#b7b5b4",
+            "primary-fixed-dim": "#abd600",
+            "on-background": "#e2e2e2",
+            "on-secondary": "#313030",
+            "error-container": "#93000a",
+            "on-primary": "#283500",
+            "surface-dim": "#121414",
+            "surface-container-high": "#282a2b",
+            "secondary-fixed": "#e5e2e1",
+            "on-tertiary-fixed-variant": "#474746",
+            "outline-variant": "#444933",
+            "on-secondary-fixed": "#1c1b1b",
+            "primary": "#ffffff",
+            "tertiary-fixed-dim": "#c8c6c5",
+            "on-secondary-fixed-variant": "#474746",
+            "primary-container": "#c3f400"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "gutter": "16px",
+            "margin": "20px",
+            "unit": "4px",
+            "xxl": "48px",
+            "xl": "32px",
+            "lg": "24px",
+            "md": "16px",
+            "xs": "4px",
+            "sm": "8px"
+          },
+          "fontFamily": {
+            "body-md": ["Inter"],
+            "stat-numerical": ["Lexend"],
+            "display-xl": ["Lexend"],
+            "headline-md": ["Lexend"],
+            "body-lg": ["Inter"],
+            "headline-lg": ["Lexend"],
+            "label-bold": ["Lexend"]
+          },
+          "fontSize": {
+            "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+            "stat-numerical": ["40px", {"lineHeight": "1.0", "fontWeight": "700"}],
+            "display-xl": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+            "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+            "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+            "headline-lg": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+            "label-bold": ["14px", {"lineHeight": "1.0", "letterSpacing": "0.05em", "fontWeight": "600"}]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface-container-lowest font-body-md text-on-surface min-h-screen pb-24">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 flex justify-between items-center px-5 h-16 bg-black/80 backdrop-blur-lg border-b border-neutral-800">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-primary-fixed overflow-hidden border border-primary-fixed/20">
+<img alt="User profile photo" class="w-full h-full object-cover" data-alt="A professional close-up portrait of a fitness-focused woman with a determined expression, set against a dark, moody gym background with soft dramatic rim lighting. The aesthetic is clean and high-performance, matching the dark mode UI with subtle hints of lime green in the background lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAjdOlg_NJffBilQ5AKrtJ3d1v8n2RiWLS5AFzCpqQ-VvOgkT4bqnXvBhPQcju3sUw7zwNMkuA3TQz_1Lz-1eTeEle10BmN9MncBxHxGi1d-bxDq5SYsv5l_Q3AEcNf_KJ1VoeDpJ3a0gRrEKX8sylqhBT0xRfaawhx7mIw5mP9wWUIpShkTDVNsgNVW4-_7MEQmk9YWZC8bkOWcojoFkkKMCvQVnWh0xfk2yqvfHw3NZlbt5iY6JfjHXDEK-pYpXp2SLDFOMinG-Q6"/>
+</div>
+<h1 class="text-xl font-black text-[#CCFF00] italic font-['Lexend'] tracking-tighter uppercase">FITVISION</h1>
+</div>
+<button class="text-[#CCFF00] hover:opacity-80 transition-opacity active:scale-95 transition-transform duration-150">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+</header>
+<main class="pt-20 px-margin space-y-lg">
+<!-- Hero Section -->
+<section class="mt-4">
+<h2 class="font-display-xl text-display-xl text-tertiary uppercase mb-xs">SMART FUELING</h2>
+<p class="font-body-md text-on-surface-variant max-w-xs">Precision nutrition calculated for your current metabolic state.</p>
+</section>
+<!-- Fridge Input -->
+<section class="bg-surface-container-low border border-outline-variant p-lg rounded-xl">
+<div class="flex items-center gap-sm mb-md">
+<span class="material-symbols-outlined text-primary-fixed" data-icon="kitchen">kitchen</span>
+<h3 class="font-headline-md text-headline-md text-primary">What's in your fridge?</h3>
+</div>
+<div class="relative group">
+<input class="w-full bg-surface-container-highest border-none focus:ring-2 focus:ring-primary-fixed text-on-surface px-md py-lg rounded-lg placeholder-on-surface-variant font-body-md transition-all" placeholder="Chicken, Spinach, Sweet Potato..." type="text"/>
+<button class="absolute right-sm top-1/2 -translate-y-1/2 bg-primary-fixed text-on-primary-fixed font-label-bold text-label-bold px-lg py-sm rounded-lg hover:opacity-90 active:scale-95 transition-all">
+          SCAN
+        </button>
+</div>
+<div class="flex flex-wrap gap-sm mt-md">
+<span class="bg-secondary-container text-on-secondary-container px-sm py-xs rounded font-label-bold text-[10px] flex items-center gap-xs">
+          BROCCOLI <span class="material-symbols-outlined text-[12px]" data-icon="close">close</span>
+</span>
+<span class="bg-secondary-container text-on-secondary-container px-sm py-xs rounded font-label-bold text-[10px] flex items-center gap-xs">
+          GREEK YOGURT <span class="material-symbols-outlined text-[12px]" data-icon="close">close</span>
+</span>
+<span class="bg-secondary-container text-on-secondary-container px-sm py-xs rounded font-label-bold text-[10px] flex items-center gap-xs">
+          OATS <span class="material-symbols-outlined text-[12px]" data-icon="close">close</span>
+</span>
+</div>
+</section>
+<!-- Filters -->
+<section class="flex gap-sm overflow-x-auto pb-xs no-scrollbar">
+<button class="bg-primary-fixed text-on-primary-fixed px-lg py-sm rounded-full font-label-bold whitespace-nowrap">HIGH PROTEIN</button>
+<button class="bg-surface-container-highest text-on-surface-variant px-lg py-sm rounded-full font-label-bold whitespace-nowrap">QUICK PREP</button>
+<button class="bg-surface-container-highest text-on-surface-variant px-lg py-sm rounded-full font-label-bold whitespace-nowrap">BULKING</button>
+<button class="bg-surface-container-highest text-on-surface-variant px-lg py-sm rounded-full font-label-bold whitespace-nowrap">LOW CARB</button>
+</section>
+<!-- Recipe Suggestions (Bento Style) -->
+<section class="grid grid-cols-1 md:grid-cols-2 gap-lg">
+<!-- Card 1: Featured -->
+<div class="relative group bg-surface-container border-l-2 border-primary-fixed overflow-hidden rounded-xl">
+<div class="h-48 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A gourmet protein bowl featuring seared lean salmon, vibrant green avocado slices, bright red quinoa, and charred asparagus. The plate is shot from a top-down angle with dramatic, cinematic lighting highlighting the textures and freshness of the ingredients. The background is a dark slate texture that reinforces the elite fitness brand aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGKfEGXDLHzhn8tCSl-Ih1t4UHd_sXsn3Kem6wJCojRR7axRyVmtc7PuAmVASGYMHl7lQW7U4xPqSr-4bE9GSrrhw3-zMhvBC9JIUf7jT0RExbR11-16LUr8nqejThDZhZ4d4dEFBpnSOzf9CHndN6nz3gtGUlKAmWoRzZaLLqErnpz8EV2qb_mRmkWgP5ok-3g-OqYTpRAE9YpmPMcNQg4hvIWlKa7l3Hng9a8Qc9wX7XD3u1VZsirMXv2PYxrIXkJFftbPmFmqm7"/>
+</div>
+<div class="p-lg">
+<div class="flex justify-between items-start mb-sm">
+<h4 class="font-headline-md text-headline-md text-tertiary">ZEN SALMON BOWL</h4>
+<div class="flex items-center gap-xs">
+<span class="w-2 h-2 rounded-full bg-primary-fixed animate-pulse"></span>
+<span class="font-label-bold text-[10px] text-primary-fixed">OPTIMAL</span>
+</div>
+</div>
+<div class="grid grid-cols-3 gap-md border-t border-outline-variant pt-md mt-md">
+<div>
+<p class="font-label-bold text-[10px] text-on-surface-variant">PROTEIN</p>
+<p class="font-stat-numerical text-stat-numerical text-[24px] text-primary-fixed">42G</p>
+</div>
+<div>
+<p class="font-label-bold text-[10px] text-on-surface-variant">CARBS</p>
+<p class="font-stat-numerical text-stat-numerical text-[24px] text-tertiary">30G</p>
+</div>
+<div>
+<p class="font-label-bold text-[10px] text-on-surface-variant">CALORIES</p>
+<p class="font-stat-numerical text-stat-numerical text-[24px] text-tertiary">540</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 2: Quick Choice -->
+<div class="bg-surface-container-low border border-outline-variant rounded-xl overflow-hidden flex flex-col sm:flex-row">
+<div class="w-full sm:w-1/3 h-40 sm:h-auto">
+<img class="w-full h-full object-cover" data-alt="A macro-shot of a high-protein breakfast omelet stuffed with fresh spinach, grilled chicken breast, and melted goat cheese. Steam rises from the hot dish, captured with high-speed photography against a dark, minimalist kitchen surface. The colors are vibrant, with deep greens and golden browns popping against the dark environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMOEnra3lCPX__5gUph7OYeB4AwbAAmFTtwlyIFVUE2n_qnQ5e5oPvzaVBeOmRa4EbxJcQXhtcm5XLGK2yv_2dIQqG79sIV2N8GLwzybL8nulYFx3Qfc8SYnYwjvLDrUvijjo3kUlw_AVuiQOTuepZGZo7D5LLHZctJbJpXPhSrMaDbjFENVkNjM7hp0ksm-ktWrqfXfE33U9zJ8yoK5_SLZCFOKkCfKMXpBXvyQ0Z2r20Ek2iIgufOq0BkL7WzZRcj_j_rTwOpvFA"/>
+</div>
+<div class="p-md flex-1 flex flex-col justify-between">
+<div>
+<h4 class="font-headline-md text-headline-md text-tertiary mb-xs">IRON OMELETTE</h4>
+<p class="text-body-md text-on-surface-variant text-[14px]">Uses 3 of your current ingredients.</p>
+</div>
+<div class="flex items-center gap-md mt-md">
+<span class="material-symbols-outlined text-primary-fixed" data-icon="timer">timer</span>
+<span class="font-label-bold text-on-surface">12 MIN</span>
+<div class="ml-auto flex items-center gap-xs">
+<span class="font-stat-numerical text-[20px] text-primary-fixed">480</span>
+<span class="font-label-bold text-[10px] text-on-surface-variant">KCAL</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 3: Post-Workout -->
+<div class="bg-surface-container-low border border-outline-variant rounded-xl overflow-hidden flex flex-col sm:flex-row">
+<div class="w-full sm:w-1/3 h-40 sm:h-auto">
+<img class="w-full h-full object-cover" data-alt="A clean, minimalist presentation of a steak and sweet potato recovery meal. The steak is perfectly sliced to show a medium-rare center, paired with mashed sweet potatoes and vibrant green peas. The lighting is bright yet focused, creating high contrast that highlights the nutritional density of the meal in a professional fitness context." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwvh6LYe-qbgYsv0XOZns-FXdbeOwy0gKwrrn3mcgfkU7wd-9ToJyotiVQEX6vXR1dcIm7ISx7l6FCaW1oiegu-VgTqPBRjXZsNesjDiAEjZ7g-Q-R5Y_guMkkLobC-7I7WpHWzBNuPfVLS9f3UJA7sfR-XngwC-HXq4V4LWpyROx8OLabCTgxhB5Y0w7QiQrB9GvHE1eiWI0AhQqF3hWmszGevUvIDScVtbkED0wcC7CYloZ2BRPtSGYdnXuYwW4r0Ej7qSnEVA_F"/>
+</div>
+<div class="p-md flex-1 flex flex-col justify-between">
+<div>
+<h4 class="font-headline-md text-headline-md text-tertiary mb-xs">STEAK &amp; RECOVERY</h4>
+<p class="text-body-md text-on-surface-variant text-[14px]">High leucine for protein synthesis.</p>
+</div>
+<div class="flex items-center gap-md mt-md">
+<span class="material-symbols-outlined text-primary-fixed" data-icon="trending_up">trending_up</span>
+<span class="font-label-bold text-on-surface">RECOVERY</span>
+<div class="ml-auto flex items-center gap-xs">
+<span class="font-stat-numerical text-[20px] text-primary-fixed">620</span>
+<span class="font-label-bold text-[10px] text-on-surface-variant">KCAL</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Goal Tracking Component -->
+<section class="bg-primary-fixed text-on-primary-fixed p-lg rounded-xl shadow-lg">
+<div class="flex justify-between items-center mb-md">
+<h3 class="font-label-bold text-label-bold uppercase">DAILY PROTEIN TARGET</h3>
+<span class="font-stat-numerical text-[20px]">85%</span>
+</div>
+<div class="w-full bg-on-primary-fixed/20 h-4 rounded-full overflow-hidden">
+<div class="bg-on-primary-fixed h-full" style="width: 85%"></div>
+</div>
+<p class="font-body-md text-[14px] mt-md opacity-90">Eating the <b>Zen Salmon Bowl</b> will complete your goal for today.</p>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 w-full z-50 flex justify-around items-center h-20 pb-4 px-2 bg-black/90 backdrop-blur-2xl border-t border-neutral-800">
+<a class="flex flex-col items-center justify-center text-neutral-500 hover:text-white transition-colors active:scale-90 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="font-['Lexend'] text-[10px] font-bold uppercase tracking-widest mt-1">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-neutral-500 hover:text-white transition-colors active:scale-90 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="fitness_center">fitness_center</span>
+<span class="font-['Lexend'] text-[10px] font-bold uppercase tracking-widest mt-1">Library</span>
+</a>
+<a class="flex flex-col items-center justify-center text-neutral-500 hover:text-white transition-colors active:scale-90 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="installs">install_mobile</span>
+<span class="font-['Lexend'] text-[10px] font-bold uppercase tracking-widest mt-1">Scan</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#CCFF00] transition-colors active:scale-90 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="restaurant" style="font-variation-settings: 'FILL' 1;">restaurant</span>
+<span class="font-['Lexend'] text-[10px] font-bold uppercase tracking-widest mt-1">Meals</span>
+</a>
+</nav>
+</body></html>

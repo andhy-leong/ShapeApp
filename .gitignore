@@ -1,0 +1,8 @@
+# Secrets du serveur (identifiants MySQL, clé API Claude)
+backend/config.php
+
+# Variables d'environnement de l'app
+mobile/.env
+
+.DS_Store
+Thumbs.db

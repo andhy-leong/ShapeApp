@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>FITVISION | Onboarding</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&amp;family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "secondary-container": "#474746",
+                    "primary-fixed": "#c3f400",
+                    "on-surface": "#e2e2e2",
+                    "background": "#121414",
+                    "surface-bright": "#37393a",
+                    "on-tertiary": "#303030",
+                    "surface-container-highest": "#333535",
+                    "outline": "#8e9379",
+                    "surface-tint": "#abd600",
+                    "secondary": "#c8c6c5",
+                    "on-error": "#690005",
+                    "surface-variant": "#333535",
+                    "inverse-on-surface": "#2f3131",
+                    "on-primary-container": "#556d00",
+                    "secondary-fixed-dim": "#c8c6c5",
+                    "error": "#ffb4ab",
+                    "inverse-surface": "#e2e2e2",
+                    "tertiary-container": "#e4e2e1",
+                    "on-error-container": "#ffdad6",
+                    "tertiary": "#ffffff",
+                    "surface-container-lowest": "#0c0f0f",
+                    "surface-container-low": "#1a1c1c",
+                    "surface": "#121414",
+                    "inverse-primary": "#506600",
+                    "on-surface-variant": "#c4c9ac",
+                    "tertiary-fixed": "#e4e2e1",
+                    "on-tertiary-fixed": "#1b1c1c",
+                    "on-primary-fixed": "#161e00",
+                    "on-primary-fixed-variant": "#3c4d00",
+                    "on-tertiary-container": "#656464",
+                    "surface-container": "#1e2020",
+                    "on-secondary-container": "#b7b5b4",
+                    "primary-fixed-dim": "#abd600",
+                    "on-background": "#e2e2e2",
+                    "on-secondary": "#313030",
+                    "error-container": "#93000a",
+                    "on-primary": "#283500",
+                    "surface-dim": "#121414",
+                    "surface-container-high": "#282a2b",
+                    "secondary-fixed": "#e5e2e1",
+                    "on-tertiary-fixed-variant": "#474746",
+                    "outline-variant": "#444933",
+                    "on-secondary-fixed": "#1c1b1b",
+                    "primary": "#ffffff",
+                    "tertiary-fixed-dim": "#c8c6c5",
+                    "on-secondary-fixed-variant": "#474746",
+                    "primary-container": "#c3f400"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "gutter": "16px",
+                    "margin": "20px",
+                    "unit": "4px",
+                    "xxl": "48px",
+                    "xl": "32px",
+                    "lg": "24px",
+                    "md": "16px",
+                    "xs": "4px",
+                    "sm": "8px"
+            },
+            "fontFamily": {
+                    "body-md": ["Inter"],
+                    "stat-numerical": ["Lexend"],
+                    "display-xl": ["Lexend"],
+                    "headline-md": ["Lexend"],
+                    "body-lg": ["Inter"],
+                    "headline-lg": ["Lexend"],
+                    "label-bold": ["Lexend"]
+            },
+            "fontSize": {
+                    "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                    "stat-numerical": ["40px", {"lineHeight": "1.0", "fontWeight": "700"}],
+                    "display-xl": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-lg": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "label-bold": ["14px", {"lineHeight": "1.0", "letterSpacing": "0.05em", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .step-progress-active { width: 40%; }
+        .glass-card {
+            background: rgba(26, 26, 26, 0.6);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface-container-lowest text-on-surface font-body-md min-h-screen">
+<header class="fixed top-0 w-full z-50 flex justify-between items-center px-5 h-16 bg-black/80 backdrop-blur-lg border-b border-neutral-800">
+<div class="flex items-center gap-2">
+<span class="text-xl font-black text-[#CCFF00] italic font-['Lexend'] tracking-tighter uppercase">FITVISION</span>
+</div>
+<div class="h-10 w-10 rounded-full border-2 border-[#CCFF00] overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A high-contrast profile portrait of a determined athlete in a dimly lit, high-end gym environment. The lighting is cinematic, with sharp rim lights highlighting facial features against a dark, industrial background. The aesthetic is professional and intense, matching an elite coach brand persona with deep blacks and subtle lime green reflections." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQZzVHvjpgeDIQ8XL22FtTcNaA7PbfOrLczd_fr7Ht7ySI7DA6-JfC7thm6VJIrLqORchmJcaUD0BumCyTtTUJsBVx7G43ADx9wNYtLmSoHkQkVqDsGxTZw4mqa4SUmSNpH6Ev3iu8sKthD1yU0Hq0HaY8vdn2cP9gLqp4M27FZMX_gv2WqkdxkxykEPDPj98s4Xjw-HTWz0iX962w9rIU36IePrLczc_TPhtoChvEzyMfgaldNI1JxxaJukCduWohC8lM7_D_NgEn"/>
+</div>
+</header>
+<main class="pt-24 pb-12 px-margin flex flex-col min-h-screen">
+<div class="mb-lg">
+<div class="flex justify-between items-end mb-sm">
+<span class="font-label-bold text-label-bold text-[#CCFF00]">STEP 2 OF 3</span>
+<span class="font-label-bold text-label-bold text-on-surface-variant">GOAL SETTING</span>
+</div>
+<div class="w-full h-1 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-[#CCFF00] step-progress-active rounded-full transition-all duration-500"></div>
+</div>
+</div>
+<section class="flex-grow">
+<h1 class="font-display-xl text-display-xl uppercase mb-xs leading-none">Define Your</h1>
+<h2 class="font-display-xl text-display-xl italic text-[#CCFF00] uppercase mb-xl">Legacy</h2>
+<div class="space-y-md">
+<div class="group relative">
+<label class="font-label-bold text-label-bold mb-xs block text-on-surface-variant uppercase tracking-[0.2em]">Full Name</label>
+<input class="w-full bg-surface-container-low border-2 border-surface-container-highest text-on-surface p-md rounded-lg focus:outline-none focus:border-[#CCFF00] transition-colors font-headline-md placeholder:text-surface-container-highest uppercase" placeholder="CHRIS MILLER" type="text"/>
+</div>
+<div class="mt-xl">
+<label class="font-label-bold text-label-bold mb-md block text-on-surface-variant uppercase tracking-[0.2em]">Fitness Level</label>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-md">
+<button class="flex flex-col items-start p-lg bg-surface-container-low border-2 border-[#CCFF00] rounded-lg text-left active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-[#CCFF00] mb-sm" data-icon="bolt">bolt</span>
+<span class="font-label-bold text-label-bold text-[#CCFF00] block mb-xs">BEGINNER</span>
+<p class="text-[12px] text-on-surface-variant leading-tight">New to consistent training. Focused on form and basics.</p>
+</button>
+<button class="flex flex-col items-start p-lg bg-surface-container-low border-2 border-surface-container-highest rounded-lg text-left hover:border-[#CCFF00]/50 transition-colors active:scale-95">
+<span class="material-symbols-outlined text-on-surface-variant mb-sm" data-icon="fitness_center">fitness_center</span>
+<span class="font-label-bold text-label-bold text-on-surface block mb-xs">INTERMEDIATE</span>
+<p class="text-[12px] text-on-surface-variant leading-tight">6-12 months of training. Ready for higher intensity.</p>
+</button>
+<button class="flex flex-col items-start p-lg bg-surface-container-low border-2 border-surface-container-highest rounded-lg text-left hover:border-[#CCFF00]/50 transition-colors active:scale-95">
+<span class="material-symbols-outlined text-on-surface-variant mb-sm" data-icon="military_tech">military_tech</span>
+<span class="font-label-bold text-label-bold text-on-surface block mb-xs">ADVANCED</span>
+<p class="text-[12px] text-on-surface-variant leading-tight">Consistent athlete. Seeking peak performance metrics.</p>
+</button>
+</div>
+</div>
+<div class="mt-xl">
+<label class="font-label-bold text-label-bold mb-md block text-on-surface-variant uppercase tracking-[0.2em]">Primary Goal</label>
+<div class="flex flex-wrap gap-sm">
+<button class="px-lg py-md rounded-full border border-surface-container-highest bg-surface-container-low font-label-bold text-label-bold uppercase active:scale-95 transition-all hover:bg-surface-container text-on-surface">
+                            LOSE WEIGHT
+                        </button>
+<button class="px-lg py-md rounded-full border-2 border-[#CCFF00] bg-[#CCFF00] text-black font-label-bold text-label-bold uppercase active:scale-95 transition-all">
+                            GAIN MUSCLE
+                        </button>
+<button class="px-lg py-md rounded-full border border-surface-container-highest bg-surface-container-low font-label-bold text-label-bold uppercase active:scale-95 transition-all hover:bg-surface-container text-on-surface">
+                            ENDURANCE
+                        </button>
+<button class="px-lg py-md rounded-full border border-surface-container-highest bg-surface-container-low font-label-bold text-label-bold uppercase active:scale-95 transition-all hover:bg-surface-container text-on-surface">
+                            FLEXIBILITY
+                        </button>
+</div>
+</div>
+</div>
+</section>
+<section class="mt-xxl grid grid-cols-1 md:grid-cols-2 gap-lg relative">
+<div class="absolute -top-12 right-0 opacity-10 pointer-events-none">
+<span class="material-symbols-outlined text-[120px]" data-icon="monitoring">monitoring</span>
+</div>
+<div class="glass-card p-lg rounded-xl flex items-center gap-md">
+<div class="bg-[#CCFF00]/10 p-md rounded-lg">
+<span class="material-symbols-outlined text-[#CCFF00]" data-icon="psychology">psychology</span>
+</div>
+<div>
+<h4 class="font-label-bold text-label-bold text-on-surface uppercase">AI ADAPTIVE PLAN</h4>
+<p class="text-[12px] text-on-surface-variant">Our algorithms will build a custom path based on your 'Gain Muscle' target.</p>
+</div>
+</div>
+</section>
+<div class="mt-xl">
+<button class="w-full bg-[#CCFF00] text-black h-16 rounded-xl font-headline-md uppercase tracking-tighter flex items-center justify-center gap-sm active:scale-[0.98] transition-all hover:brightness-110">
+                CONTINUE TO METRICS
+                <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</button>
+<button class="w-full mt-md text-on-surface-variant font-label-bold text-label-bold uppercase tracking-widest py-md hover:text-white transition-colors">
+                Back to step 1
+            </button>
+</div>
+</main>
+<div class="hidden md:block fixed bottom-lg right-lg z-50">
+<div class="glass-card p-md rounded-full flex items-center gap-md pr-lg">
+<div class="h-10 w-10 bg-surface-container-highest rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-[#CCFF00]" data-icon="support_agent">support_agent</span>
+</div>
+<span class="font-label-bold text-[12px] text-on-surface uppercase">Need help setting goals?</span>
+</div>
+</div>
+<div class="fixed inset-0 pointer-events-none z-[-1] overflow-hidden opacity-20">
+<img class="w-full h-full object-cover grayscale opacity-30" data-alt="A cinematic, wide-angle shot of a darkened, modern fitness facility with professional equipment casting long shadows. Subtle pulses of electric lime light emanate from digital displays on the walls. The scene is atmospheric, emphasizing a high-performance environment that is both sleek and motivating, with a deep black and charcoal grey color palette." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBa1MY5NTTh39rbUyd1IYHxKzDn0SLlBtfXTQYNqC_ruhMJOJ1S2y0j61cKNfza_0EcTK3zOBoGPVTrRarGVTTlNpHAmcPNHqk39xRaDMgQa7xcJ6Gc0vnRXZ-cDHph-bwDwJ9XCvRd0Tun6UKHsxpSIbkE5Twp01NnKZnA5zG9U8W31hy75R94OQlM2J8kxeTqolmN9X5b-zB2pi3BQYmOyz4I_nCEZoCWSwOG77vW4WVKaGUIqiAbqycVGa7CfkVmFLp72Jeen45N"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-surface-container-lowest/80 to-transparent"></div>
+</div>
+</body></html>

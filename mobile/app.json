@@ -1,0 +1,70 @@
+{
+  "expo": {
+    "name": "FitVision",
+    "slug": "fitvision",
+    "scheme": "fitvision",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "dark",
+    "backgroundColor": "#000000",
+    "ios": {
+      "bundleIdentifier": "com.andhyleong.fitvision",
+      "supportsTablet": false,
+      "infoPlist": {
+        "ITSAppUsesNonExemptEncryption": false
+      }
+    },
+    "android": {
+      "package": "com.andhyleong.fitvision",
+      "adaptiveIcon": {
+        "backgroundColor": "#000000",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      }
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-router",
+      "expo-font",
+      "expo-secure-store",
+      "expo-image",
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/splash-icon.png",
+          "imageWidth": 160,
+          "backgroundColor": "#000000"
+        }
+      ],
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "FitVision utilise la caméra pour analyser tes plats, scanner les codes-barres et le contenu de ton frigo.",
+          "recordAudioAndroid": false
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "FitVision accède à tes photos pour analyser un plat déjà photographié.",
+          "cameraPermission": "FitVision utilise la caméra pour analyser tes plats et le contenu de ton frigo."
+        }
+      ],
+      [
+        "@kingstinct/react-native-healthkit",
+        {
+          "NSHealthShareUsageDescription": "FitVision lit tes pas, calories actives, fréquence cardiaque, taille et poids pour adapter tes objectifs et tes entraînements.",
+          "NSHealthUpdateUsageDescription": "FitVision enregistre tes repas (calories et macros), ton poids et tes séances d'entraînement dans Santé.",
+          "background": false
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}
